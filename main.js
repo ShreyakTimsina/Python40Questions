@@ -26,6 +26,8 @@ document.querySelector("#switch").addEventListener("change", function () {
   }
 });
 
+// COPY CODE
+let clipboard1 = new ClipboardJS("#copy-btn");
 // KEYWORD SEARCH
 
 function keywordSearch() {
@@ -58,6 +60,6 @@ function keywordSearch() {
   });
 }
 
+// search event listeners
 document.querySelector("#search-btn").addEventListener("click", keywordSearch);
-
 document.querySelector("#search").addEventListener("keyup", keywordSearch);
