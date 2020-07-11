@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- --------------SEARCH ENGINE OPTIMIZATION---------------- -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
-      rel="stylesheet"
+    <!-- SEO DESCRIPTION -->
+    <meta
+      name="description"
+      content="This website contains your queries related to python programming and the answers from the experts."
     />
+    <!-- SEO KEYWORDS -->
+    <meta
+      name="keywords"
+      content="python, programming, questions, answers, learn python, understand python, how to do programming, learn python programming"
+    />
+    <!-- SEO AUTHOR -->
+    <meta name="author" content="Write Name of authors here" />
+    <!--/ --------------/SEARCH ENGINE OPTIMIZATION---------------- -->
+
+    <!-- FONT AWESOME ICONS -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
+    <!-- CSS STYLESHEET -->
     <link rel="stylesheet" href="style.css" />
+    <!-- CHANGES MODE WITH JAVASCRIPT -->
     <link id="css-mode" rel="stylesheet" href="darkmode.css" />
+    <!-- PAGE TITLE -->
     <title>Python Questions</title>
   </head>
   <body>
@@ -27,6 +42,7 @@
               <span><i class="fab fa-python"></i>Python</span>Questions
             </h1>
           </div>
+          <!-- NAVIGATION BUTTONS IF  NEEDED/ CAN BE DELETED / HAS STYLING IN THE CSS BUT IS COMMENTED OUT  -->
           <!-- <div class="navigation">
             <ul>
               <li><a href="#">Home</a></li>
@@ -42,6 +58,7 @@
     <!-- CONTENT CONTAINER -->
     <div class="container">
       <div class="content-container">
+        <!-- CONTAINS THE SIDEBAR -->
         <!-- ASIDE -->
         <aside>
           <div class="mode-change">
@@ -59,6 +76,8 @@
               <i class="fas fa-search"></i>
             </button>
           </div>
+
+          <!-- THE LIST OF THE TOPICS -->
           <div id="topics">
             <ul>
               <li><a href="#packages">Packages</a></li>
@@ -75,6 +94,7 @@
         </aside>
         <!-- /ASIDE -->
 
+        <!-- THE DESCRIPTION OF THE TOPICS -->
         <!-- CONTENT -->
         <div class="answer-container">
           <!-- Packages -->
@@ -92,8 +112,15 @@
                 >.libPaths() # get library location
                 <br />
                 library() &nbsp;&nbsp;# see all packages installed <br />
-                search() &nbsp;&nbsp;&nbsp;# see packages currently loaded</code
-              >
+                search() &nbsp;&nbsp;&nbsp;# see packages currently loaded
+                <i
+                  class="fas fa-clipboard"
+                  data-clipboard-text=">.libPaths() # get library location
+                library() &nbsp;&nbsp;# see all packages installed 
+                search() &nbsp;&nbsp;&nbsp;# see packages currently loaded"
+                  id="copy-btn"
+                ></i>
+              </code>
             </p>
 
             <h2>Adding Packages</h2>
@@ -884,7 +911,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"
     ></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
