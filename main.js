@@ -1,5 +1,7 @@
 // Smooth Scrolling
-$(".content-container ul li a").on("click", function (event) {
+$(".content-container ul li a, .top-btn button a").on("click", function (
+  event
+) {
   if (this.hash !== "") {
     event.preventDefault();
 
@@ -23,33 +25,39 @@ document.querySelector("#switch").addEventListener("change", function () {
     document.querySelector("#css-mode").setAttribute("href", "lightmode.css");
   }
 });
+
 // KEYWORD SEARCH
 
 function keywordSearch() {
-  const keyWord = document.querySelector("#search").value.toLowerCase();
+  let searchedText = document.querySelector("#search").value;
+  const keyWord = document
+    .querySelector("#search")
+    .value.toLowerCase()
+    .replace(/\s/g, "");
 
-  const allText = document.body.textContent.toLowerCase();
+  const topics = document.querySelector("#topics").getElementsByTagName("a");
 
-  console.log("searched");
+  Array.from(topics).forEach((topic) => {
+    const topicName = topic.textContent.replace(/\s/g, "");
 
-  // if (allText.includes(keyWord)) {
-  //   allText.includes(keyWord).style.color = "red";
-  // } else {
-  //   alert("Keyword Not Found.");
-  // }
-
-  // Array.from(allText).forEach((text) => {
-  //   if (text.indexOf(keyWord) != -1) {
-  //     // text.style.background = "yellow";
-  //     console.log("Found");
-  //   }
-  // });
+    if (searchedText.length >= 3) {
+      if (topicName.toLowerCase().indexOf(keyWord) > -1) {
+        topic.style.backgroundColor = "yellow";
+        topic.style.color = "black";
+        topic.style.padding = "5px";
+      } else {
+        topic.style.backgroundColor = "transparent";
+        topic.style.color = "inherit";
+        topic.style.padding = "initial";
+      }
+    } else {
+      topic.style.background = "transparent";
+      topic.style.color = "inherit";
+      topic.style.padding = "initial";
+    }
+  });
 }
 
 document.querySelector("#search-btn").addEventListener("click", keywordSearch);
 
-document.querySelector("#search").addEventListener("keypress", (e) => {
-  if (e.keyCode === 13) {
-    keywordSearch();
-  }
-});
+document.querySelector("#search").addEventListener("keyup", keywordSearch);
