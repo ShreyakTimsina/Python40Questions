@@ -242,7 +242,7 @@ footer {
   text-align: center;
 }
 
-.top-btn {
+.top-btn button {
   position: fixed;
   bottom: 10px;
   right: 50px;
@@ -252,6 +252,8 @@ footer {
   border-radius: 50%;
   cursor: pointer;
   text-align: center;
+  border: none;
+  font-size: 40px;
 }
 
 .top-btn a {
