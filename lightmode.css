@@ -1,0 +1,49 @@
+:root {
+  --medium-color: rgb(95, 95, 95);
+  --dark-color: rgb(49, 49, 49);
+  --light-color: #d1d1d1;
+  --code-bgcolor: rgb(138, 138, 138);
+}
+
+body {
+  background-color: rgb(231, 231, 231);
+  color: #000;
+}
+
+.nav-container .logo h1 {
+  color: #fff;
+}
+
+a {
+  color: #000;
+}
+
+.content-container aside .search {
+  border: 1px solid var(--dark-color);
+  border-radius: 4px;
+}
+
+.content-container aside ul {
+  background-color: var(--light-color);
+}
+
+.details {
+  background-color: var(--light-color);
+}
+
+.details h1 {
+  color: #000;
+}
+
+table {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+td {
+  background-color: var(--code-bgcolor);
+}
+
+footer h3 {
+  color: #fff;
+}

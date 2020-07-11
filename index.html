@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link id="css-mode" rel="stylesheet" href="darkmode.css" />
+    <title>Python Questions</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <div class="container">
+        <div class="nav-container">
+          <div class="logo">
+            <h1>
+              <span><i class="fab fa-python"></i>Python</span>Questions
+            </h1>
+          </div>
+          <!-- <div class="navigation">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+    </nav>
+    <!-- /NAVBAR -->
+
+    <!-- CONTENT CONTAINER -->
+    <div class="container">
+      <div class="content-container">
+        <!-- ASIDE -->
+        <aside>
+          <div class="mode-change">
+            <i class="fas fa-sun"></i>
+            <label class="switch">
+              <input id="switch" type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+            <i class="fa fa-moon"></i>
+          </div>
+
+          <div class="search">
+            <input id="search" type="text" placeholder="Search" />
+            <button class="search-btn" id="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+
+          <ul>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#getting-help">Getting Help</a></li>
+            <li><a href="#workspace">The Workspace</a></li>
+            <li><a href="#input-output">Input/Output</a></li>
+            <li><a href="#gui">Graphic User Interface</a></li>
+            <li><a href="#customize">Customizing</a></li>
+            <li><a href="#pqo">Publication Quality Output</a></li>
+            <li><a href="#batch-process">Batch Processing</a></li>
+            <li><a href="#reusing-results">Reusing Results</a></li>
+          </ul>
+        </aside>
+        <!-- /ASIDE -->
+
+        <!-- CONTENT -->
+        <div class="answer-container">
+          <!-- Packages -->
+          <div id="packages" class="details">
+            <h1>Packages</h1>
+            <p>
+              Packages are collections of R functions, data, and compiled code
+              in a well-defined format. The directory where packages are stored
+              is called the library. R comes with a standard set of packages.
+              Others are available for download and installation. Once
+              installed, they have to be loaded into the session to be used.
+            </p>
+            <p>
+              <code
+                >.libPaths() # get library location
+                <br />
+                library() &nbsp;&nbsp;# see all packages installed <br />
+                search() &nbsp;&nbsp;&nbsp;# see packages currently loaded</code
+              >
+            </p>
+
+            <h2>Adding Packages</h2>
+            <p>
+              You can expand the types of analyses you do be adding other
+              packages. A complete
+              <a href="http://cran.r-project.org/web/packages/"
+                >list of contributed packages</a
+              >
+              is available from CRAN.
+            </p>
+            <p>Follow these steps:</p>
+            <ol>
+              <li>
+                <span
+                  >Download and install a package (you only need to do this
+                  once).</span
+                >
+              </li>
+              <li>
+                <span
+                  >To use the package, invoke the<strong> library(</strong
+                  ><em>package</em><strong>)</strong> command to load it into
+                  the current session. (You need to do this once in each
+                  session, unless you customize your environment to
+                  automatically load it each time.)
+                </span>
+              </li>
+            </ol>
+            <p>On <strong>MS Windows</strong>:</p>
+            <ol>
+              <li>
+                <span
+                  >Choose <strong>Install Packages</strong> from the
+                  <strong>Packages</strong> menu</span
+                >.
+              </li>
+              <li>
+                <span
+                  >Select a <strong>CRAN Mirror. </strong>(e.g. Norway)</span
+                >
+              </li>
+              <li><span>Select a package. (e.g. boot</span>)</li>
+              <li>
+                <span
+                  >Then use the <strong>library(</strong><em>package</em
+                  ><strong>)</strong> function to load it for use. (e.g.
+                  library(boot))
+                </span>
+              </li>
+            </ol>
+            <p>On <strong>Linux</strong>:</p>
+            <ol>
+              <li>
+                <span
+                  >Download the package of interest as a compressed file.
+                </span>
+              </li>
+              <li>
+                <span
+                  >At the command prompt, install it using
+                  <strong
+                    ><br />
+                    R CMD INSTALL <em>[options] [l-lib]</em> <em>pkgs</em>
+                  </strong></span
+                >
+              </li>
+              <li>
+                <span
+                  >Use the<strong> library(</strong><em>package</em
+                  ><strong>)</strong> function within R to load it for use in
+                  the session.
+                </span>
+              </li>
+            </ol>
+
+            <h2>Creating Your Own Packages</h2>
+            <p>
+              To create your own packages look at
+              <a href="http://cran.r-project.org/doc/manuals/R-exts.pdf"
+                >Writing R Extensions </a
+              >(the definitive guide), Leisch's
+              <a
+                href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf"
+                >Creating R Packages: A Tutorial</a
+              >, and Rossi's
+              <a
+                href="http://www1.appstate.edu/~arnholta/Software/MakingPackagesUnderWindows.pdf"
+                >Making R packages Under Windows: A Tutorial</a
+              >.
+            </p>
+            <h2>To Practice</h2>
+            <p>
+              <a href="https://www.datacamp.com/courses/free-introduction-to-r">
+                This free interactive course </a
+              >covers the basics of R.
+            </p>
+          </div>
+          <!-- /Packages -->
+
+          <!-- GETTING HELP -->
+          <div id="getting-help" class="details">
+            <h1>Getting Help</h1>
+            <p>
+              Once R is installed, there is a comprehensive built-in help
+              system. At the program's command prompt you can use any of the
+              following:
+            </p>
+
+            <p>
+              <code
+                >help.start() &nbsp;&nbsp;# general help<br />
+                help(<em>foo</em>) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# help about
+                function <em>foo</em><br />
+                ?<em>foo</em>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#
+                same thing <br />
+                apropos(&quot;<em>foo</em>&quot;) # list all functions
+                containing string foo<br />
+                example(<em>foo</em>) &nbsp;&nbsp;# show an example of function
+                <em>foo</em>
+              </code>
+            </p>
+            <p>
+              <code
+                ># search for foo in help manuals and archived mailing lists<br />
+                RSiteSearch(&quot;<em>foo</em>&quot;)
+              </code>
+            </p>
+            <p>
+              <code
+                ># get vignettes on using installed packages<br />
+                vignette() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# show available
+                vingettes<br />
+                vignette(&quot;<em>foo</em>&quot;) # show specific vignette
+              </code>
+            </p>
+            <h2>Sample Datasets</h2>
+            <p>
+              R comes with a number of sample datasets that you can experiment
+              with. Type <strong>data( )</strong> to see the available datasets.
+              The results will depend on which
+              <a href="packages.html">packages</a> you have loaded. Type
+              <strong>help(</strong><em>datasetname</em>) for details on a
+              sample dataset.
+            </p>
+
+            <h2>To Practice</h2>
+            <p>
+              <a href="https://www.datacamp.com/courses/free-introduction-to-r">
+                This free interactive course </a
+              >covers the basics of R.
+            </p>
+          </div>
+          <!-- /GETTING HELP -->
+
+          <!-- THE WORKSPACE -->
+          <div id="workspace" class="details">
+            <h1>The Workspace</h1>
+
+            <p>
+              The workspace is your current R working environment and includes
+              any user-defined objects (vectors, matrices, data frames, lists,
+              functions). At the end of an R session, the user can save an image
+              of the current workspace that is automatically reloaded the next
+              time R is started. Commands are entered interactively at the R
+              user prompt. <strong>Up</strong> and
+              <strong>down arrow keys</strong> scroll through your command
+              history. <br />
+              <br />
+              You will probably want to keep different projects in different
+              physical directories. Here are some standard commands for managing
+              your workspace.
+            </p>
+
+            <p>
+              <code
+                >getwd() # print the current working directory - cwd <br />
+                ls() &nbsp;&nbsp;&nbsp;# list the objects in the current
+                workspace</code
+              >
+            </p>
+            <p>
+              <code>
+                setwd(mydirectory) &nbsp;&nbsp;&nbsp;&nbsp; # change to
+                mydirectory<br />
+                setwd(&quot;c:/docs/mydir&quot;) &nbsp;# note / instead of \ in
+                windows <br />
+                setwd(&quot;/usr/rob/mydir&quot;) # on linux</code
+              >
+            </p>
+            <p>
+              <code
+                ># view and set options for the session<br />
+                help(options) # learn about available options<br />
+                options() # view current option settings<br />
+                options(digits=3) # number of digits to print on output
+              </code>
+            </p>
+            <p>
+              <code
+                ># work with your previous commands<br />
+                history() # display last 25 commands<br />
+                history(max.show=Inf) # display all previous commands<br />
+                <br />
+                # save your command history <br />
+                savehistory(file=&quot;<em>myfile</em>&quot;) # default is
+                &quot;.Rhistory&quot; <br />
+                <br />
+                # recall your command history <br />
+                loadhistory(file=&quot;<em>myfile</em>&quot;) # default is
+                &quot;.Rhistory&quot;</code
+              >
+            </p>
+            <p>
+              <code
+                ># save the workspace to the file .RData in the cwd
+                <br />
+                save.image()<br />
+                <br />
+                # save specific objects to a file<br />
+                # if you don't specify the path, the cwd is assumed
+                <br />
+                save(object list,file=&quot;myfile.RData&quot;)
+              </code>
+            </p>
+            <p>
+              <code
+                ># load a workspace into the current session<br />
+                # if you don't specify the path, the cwd is assumed <br />
+                load(&quot;myfile.RData&quot;)
+              </code>
+            </p>
+            <p>
+              <code
+                >q() # quit R. You will be prompted to save the workspace.
+              </code>
+            </p>
+            <h2>Important Note to Windows Users:</h2>
+            <p>
+              R gets confused if you use a path in your code like:
+              <code>c:\mydocuments\myfile.txt</code>
+              This is because R sees &quot;\&quot; as an escape character.
+              Instead, use:
+              <code
+                >c:\\my documents\\myfile.txt<br />
+                c:/mydocuments/myfile.txt</code
+              >
+              Either will work. I use the second convention throughout this
+              website.
+            </p>
+            <h2>To Practice</h2>
+            <p>
+              <a href="https://www.datacamp.com/courses/free-introduction-to-r">
+                This free intro to R course</a
+              >
+              will get you familiar with the R workspace.
+            </p>
+          </div>
+          <!-- /THE WORKSPACE -->
+
+          <!-- INPUT/OUTPUT -->
+          <div id="input-output" class="details">
+            <h1>Input/Output</h1>
+            <p>
+              By default, launching R starts an interactive session with input
+              from the keyboard and output to the screen. However, you can have
+              input come from a script file (a file containing R commands) and
+              direct output to a variety of destinations.
+            </p>
+            <h2>Input</h2>
+            <p>
+              The <strong>source( )</strong> function runs a script in the
+              current session. If the filename does not include a path, the file
+              is taken from the current working directory.
+            </p>
+            <p>
+              <code
+                ># input a script<br />
+                source(&quot;myfile&quot;)
+              </code>
+            </p>
+            <h2>Output</h2>
+            <p>
+              The <strong>sink( )</strong> function defines the direction of the
+              output.
+            </p>
+            <p>
+              <code
+                ># direct output to a file <br />
+                sink(&quot;myfile&quot;, append=FALSE, split=FALSE)<br />
+                <br />
+                # return output to the terminal <br />
+                sink()</code
+              >
+            </p>
+            <p>
+              The <strong>append</strong> option controls whether output
+              overwrites or adds to a file. The <strong>split</strong> option
+              determines if output is also sent to the screen as well as the
+              output file.
+            </p>
+            <p>
+              Here are some examples of the <strong>sink() </strong>function.
+            </p>
+            <p>
+              <code>
+                # output directed to output.txt in c:\projects directory.<br />
+                # output overwrites existing file. no output to terminal. <br />
+                sink(&quot;c:/projects/output.txt&quot;)<br />
+                <br />
+                # output directed to myfile.txt in cwd. output is appended<br />
+                # to existing file. output also send to terminal. <br />
+                sink(&quot;myfile.txt&quot;, append=TRUE, split=TRUE)
+              </code>
+            </p>
+            <p>
+              When redirecting output, use the <strong>cat( )</strong> function
+              to annotate the output.
+            </p>
+            <h2>Graphs</h2>
+            <p>
+              <strong>sink( )</strong> will not redirect graphic output. To
+              redirect graphic output use one of the following functions. Use
+              <strong>dev.off( )</strong> to return output to the terminal.
+            </p>
+            <table width="90%" border="0">
+              <tr>
+                <td><strong>Function</strong></td>
+                <td><strong>Output to </strong></td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <strong>pdf(&quot;mygraph.pdf&quot;)</strong>
+                </td>
+                <td valign="top">pdf file</td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <strong>win.metafile(&quot;mygraph.wmf&quot;)</strong>
+                </td>
+                <td valign="top">windows metafile</td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <strong>png(&quot;mygraph.png&quot;)</strong>
+                </td>
+                <td valign="top">png file</td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <strong>jpeg(&quot;mygraph.jpg&quot;)</strong>
+                </td>
+                <td valign="top">jpeg file</td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <strong>bmp(&quot;mygraph.bmp&quot;)</strong>
+                </td>
+                <td valign="top">bmp file</td>
+              </tr>
+              <tr>
+                <td valign="top">
+                  <strong>postscript(&quot;mygraph.ps&quot;)</strong>
+                </td>
+                <td valign="top">postscript file</td>
+              </tr>
+            </table>
+            <p>
+              Use a full path in the file name to save the graph outside of the
+              current working directory.
+            </p>
+            <p>
+              <code
+                ># example - output graph to jpeg file <br />
+                jpeg(&quot;c:/mygraphs/myplot.jpg&quot;)<br />
+                plot(x)<br />
+                dev.off()</code
+              >
+            </p>
+            <h2>To Practice</h2>
+            <p>
+              To start running scripts in R, try this
+              <a href="https://www.datacamp.com/courses/free-introduction-to-r"
+                >free interactive introduction to R course.</a
+              >
+            </p>
+          </div>
+          <!-- /INPUT/OUTPUT -->
+
+          <!-- /GRAPHICAL USER INTERFACE -->
+          <div id="gui" class="details">
+            <h1>Graphic User Interfaces</h1>
+            <p>
+              R is a command line driven program. The user enters commands at
+              the prompt ( <strong>&gt;</strong> by default ) and each command
+              is executed one at a time.
+            </p>
+            <p>
+              There have been a number of attempts to create a more graphical
+              interface, ranging from code editors that interact with R, to
+              full-blown GUIs that present the user with menus and dialog boxes.
+            </p>
+            <p><a href="images/Rstudio.png"></a> click to view</p>
+            <p>
+              <a href="http://rstudio.org/">RStudio</a> is my favorite example
+              of a code editor that interfaces with R for Windows, MacOS, and
+              Linux platforms.
+            </p>
+
+            <p>Both of these programs can make R a lot easier to use.</p>
+            <h2>To Practice</h2>
+            <p>
+              <a
+                href="https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1"
+                >This interactive course</a
+              >
+              gives an overview of installing and working with RStudio.
+            </p>
+          </div>
+          <!-- /GRAPHICAL USER INTERFACE -->
+
+          <!-- CUSTOMIZING STARTUP -->
+          <div id="customize" class="details">
+            <h1>Customizing Startup</h1>
+            <p>
+              You can customize the R environment through a site initialization
+              file or a directory initialization file. R will always source the
+              <strong>Rprofile.site</strong> file first. On Windows, the file is
+              in the <em>C:\Program Files\R\R-n.n.n\etc</em> directory. You can
+              also place a <strong>.Rprofile</strong> file in any directory that
+              you are going to run R from or in the user home directory.
+            </p>
+            <p>
+              At startup, R will source the <strong>Rprofile.site</strong> file.
+              It will then look for a .<strong>Rprofile</strong> file to source
+              in the current working directory. If it doesn't find it, it will
+              look for one in the user's home directory. There are two special
+              functions you can place in these files. .<strong>First( )</strong>
+              will be run at the start of the R session and
+              <strong>.Last( )</strong> will be run at the end of the session.
+            </p>
+            <p>
+              <code
+                ># Sample Rprofile.site file
+                <br />
+                <br />
+                # Things you might want to change<br />
+                # options(papersize=&quot;a4&quot;)
+                <br />
+                # options(editor=&quot;notepad&quot;)
+                <br />
+                # options(pager=&quot;internal&quot;)<br />
+                <br />
+                # R interactive prompt <br />
+                # options(prompt=&quot;&gt; &quot;)<br />
+                # options(continue=&quot;+ &quot;)
+                <br />
+                <br />
+                # to prefer Compiled HTML <br />
+                help options(chmhelp=TRUE)
+
+                <br />
+                # to prefer HTML help
+                <br />
+                # options(htmlhelp=TRUE)
+
+                <br />
+                <br />
+                # General options
+                <br />
+
+                options(tab.width = 2)
+                <br />
+                options(width = 130)<br />
+                options(graphics.record=TRUE)
+                <br />
+                <br />
+                .First &lt;- function(){<br />
+                &nbsp;library(Hmisc)<br />
+                &nbsp;library(R2HTML)<br />
+                &nbsp;cat(&quot;\nWelcome at&quot;, date(), &quot;\n&quot;)
+                <br />
+                }<br />
+                <br />
+                .Last &lt;- function(){
+                <br />
+                &nbsp;cat(&quot;\nGoodbye at &quot;, date(), &quot;\n&quot;)<br />
+                }<br />
+              </code>
+            </p>
+            <h2>Going Further</h2>
+            <p>
+              To explore customizing the RStudio interface, try this
+              <a
+                href="https://www.datacamp.com/courses/working-with-the-rstudio-ide-part-1"
+                >RStudio course</a
+              >
+              which is taught by Garrett Grolemund, data scientist for RStudio.
+            </p>
+          </div>
+          <!-- /CUSTOMIZING STARTUP -->
+
+          <!-- PUBLICATION QUALITY OUTPUT -->
+          <div id="pqo" class="details">
+            <h1>Publication Quality Output</h1>
+            <p>
+              Compared with SAS and SPSS, R's ability to output results for
+              publication quality reports is somewhat rudimentary (although this
+              is evolving).
+            </p>
+            <p>
+              The
+              <a
+                href="https://www.rdocumentation.org/packages/R2HTML/versions/2.3.2"
+                >R2HTML</a
+              >
+              package lets you output text, tables, and graphs in HTML format.
+              Here is a sample session, followed by an explanation.
+            </p>
+            <p>
+              <code
+                ># Sample Session <br />
+                library(R2HTML)<br />
+                HTMLStart(outdir=&quot;c:/mydir&quot;,
+                file=&quot;myreport&quot;,<br />
+                &nbsp;&nbsp; extension=&quot;html&quot;, echo=FALSE,
+                HTMLframe=TRUE)<br />
+                HTML.title(&quot;My Report&quot;, HR=1)<br />
+                <br />
+                HTML.title(&quot;Description of my data&quot;, HR=3)<br />
+                summary(mydata)
+                <br />
+                <br />
+                HTMLhr()<br />
+                <br />
+                HTML.title(&quot;X Y Scatter Plot&quot;, HR=2)<br />
+                plot(mydata$y~mydata$x)<br />
+                HTMLplot()
+                <br />
+                <br />
+                HTMLStop()
+              </code>
+            </p>
+            <p>
+              Once you invoke <strong>HTMLStart( )</strong>, the prompt will
+              change to <strong>HTML&gt;</strong> until you end with
+              <strong>HTMLStop()</strong>.
+            </p>
+            <p>
+              The<strong> echo=TRUE</strong> option copies commands to the same
+              file as the output.
+            </p>
+            <p>
+              <strong>HTMLframe=TRUE</strong> creates framed output, with
+              commands in the left frame, linked to output in the right frame.
+              By default, a CSS file named R2HTML.css controlling page look and
+              feel is output to the same directory. Optionally, you can include
+              a <strong>CSSFile=</strong> option to use your own formatting
+              file.
+            </p>
+            <p>
+              Use <strong>HTML.title()</strong> to annotate the output. The
+              <strong>HR </strong>option refers to HTML title types (H1, H2, H3,
+              etc.) . The default is HR=2.
+            </p>
+            <p><strong>HTMLhr()</strong> creates a horizontal rule.</p>
+            <p>
+              Since several interactive commands may be necessary to create a
+              finished graph, invoke the <strong>HTMLplot() </strong>function
+              when each graph is ready to output.
+            </p>
+            <p>
+              The <strong>RNews</strong> article
+              <a href="https://cran.r-project.org/doc/Rnews/Rnews_2003-3.pdf"
+                >The R2HTML Package</a
+              >
+              has more complex examples using titles, annotations, header and
+              footer files, and cascading style sheets.
+            </p>
+
+            <h2>Other Options</h2>
+            <p>
+              The
+              <a href="http://rmarkdown.rstudio.com/">R Markdown Package</a>
+              from R Studio supports dozens of static and dynamic output formats
+              including HTML, PDF, MS Word, scientific articles, websites, and
+              more. (To practice R Markdown, try
+              <a
+                href="https://www.datacamp.com/courses/reporting-with-r-markdown"
+                >this tutorial</a
+              >
+              taught by Garrett Grolemund, Data Scientist for R Studio.)
+            </p>
+
+            <p>
+              <a href="http://www.stat.uni-muenchen.de/~leisch/Sweave/"
+                >Sweave</a
+              >
+              allows you to imbed R code in LaTeX, producing attractive reports
+              if you know that markup language.
+            </p>
+            <p>
+              The
+              <a
+                href="http://cran.r-project.org/web/packages/odfWeave/index.html"
+                >odfWeave</a
+              >
+              package has functions that allow you to imbedd R output in Open
+              Document Format (ODF) files. These are the types of files created
+              by <a href="http://www.openoffice.org">OpenOffice</a> software.
+            </p>
+            <p>
+              The
+              <a
+                href="http://cran.r-project.org/web/packages/SWordInstaller/index.html"
+                >SWordInstaller</a
+              >
+              package allows you to add R output to Microsoft Word documents.
+            </p>
+            <p>
+              The
+              <a href="http://cran.r-project.org/web/packages/R2PPT/index.html"
+                >R2PPT</a
+              >
+              provides wrappers for adding R output to Microsoft PowerPoint
+              presentations.
+            </p>
+          </div>
+          <!-- PUBLICATION QUALITY OUTPUT -->
+
+          <!-- BATCH PROCESSING -->
+          <div id="batch-process" class="details">
+            <h1>Batch Processing</h1>
+            <p>
+              You can run R non-interactively with input from infile and send
+              output (stdout/stderr) to another file. Here are examples.
+            </p>
+
+            <p>
+              <code
+                ># on Linux <br />
+                R CMD BATCH [options] my_script.R [outfile]
+              </code>
+            </p>
+            <p>
+              <code
+                ># on Microsoft Windows (adjust the path to R.exe as needed)
+                <br />
+                &quot;C:\Program Files\R\R-2.13.1\bin\R.exe&quot; CMD BATCH
+                <br />
+                &nbsp;&nbsp; --vanilla --slave &quot;c:\my
+                projects\my_script.R&quot;
+              </code>
+            </p>
+            <p>
+              Be sure to look at the section on <a href="io.html">I/O</a> for
+              help writing R scripts.
+            </p>
+            <p>
+              See an
+              <a href="http://cran.r-project.org/doc/manuals/R-intro.pdf"
+                >Introduction to R</a
+              >
+              (Appendix B) for information on the command line options.
+            </p>
+            <h2>To Practice</h2>
+            <p>
+              To start running scripts in R, try this
+              <a href="https://www.datacamp.com/courses/free-introduction-to-r"
+                >free interactive introduction to R course.</a
+              >
+            </p>
+          </div>
+          <!-- /BATCH PROCESSING -->
+
+          <!-- REUSING RESULTS -->
+          <div id="reusing-results" class="details">
+            <h1>Reusing Results</h1>
+            <p>
+              In <strong>SAS</strong>, you can save the results of statistical
+              analyses using the <em>Output Delivery System </em>(ODS). While
+              ODS is a vast improvement over PROC PRINTO, it's sophistication
+              can make some features very hard to learn (just try mastering PROC
+              TEMPLATE). In <strong>SPSS</strong> you can do the same thing with
+              the <em>Output Management System</em> (OMS). Again, not one of the
+              easiest topics to learn.
+            </p>
+            <p>
+              One of the most useful design features of R is that the output of
+              analyses can easily be saved and used as input to additional
+              analyses.
+              <code
+                ># Example 1 <br />
+                lm(mpg~wt, data=mtcars)
+              </code>
+            </p>
+            <p>
+              This will run a simple linear regression of miles per gallon on
+              car weight using the data frame mtcars. Results are sent to the
+              screen. Nothing is saved.
+            </p>
+            <p>
+              <code
+                ># Example 2 <br />
+                fit &lt;- lm(mpg~wt, data=mtcars)
+              </code>
+            </p>
+            <p>
+              This time, the same regression is performed but the results are
+              saved under the name fit. No output is sent to the screen.
+              However, you now can manipulate the results.
+            </p>
+            <p>
+              <code
+                ># Example 2 (continued...)<br />
+                <br />
+                str(fit) # view the contents/structure of &quot;fit&quot;</code
+              >
+            </p>
+            <p>
+              The assignment has actually created a
+              <a href="../input/datatypes.html">list</a> called &quot;fit&quot;
+              that contains a wide range of information (including the predicted
+              values, residuals, coefficients, and more.
+            </p>
+            <p>
+              <code
+                ># Example 2 (continued again)<br />
+                # plot residuals by fitted values<br />
+                plot(fit$residuals, fit$fitted.values)
+              </code>
+            </p>
+            <p>
+              To see what a function returns, look at the
+              <strong>value</strong> section of the online help for that
+              function. Here we would look at <strong>help(lm)</strong>.
+            </p>
+            <p>
+              The results can also be used by a wide range of other functions.
+            </p>
+            <p>
+              <code
+                ># Example 2 (one last time, I promise)<br />
+                <br />
+                # produce diagnostic plots<br />
+                plot(fit) <br />
+                <br />
+                # predict mpg from wt in a new set of data <br />
+                predict(fit, mynewdata)<br />
+                <br />
+                # get and save influence statistics
+                <br />
+                cook &lt;- cooks.distance(fit)
+              </code>
+            </p>
+
+            <h2>To Practice</h2>
+            <p>
+              To practice reusing results in variables, try
+              <a href="https://www.datacamp.com/courses/free-introduction-to-r"
+                >this interactive course</a
+              >
+              on the introduction to R programming from DataCamp.
+            </p>
+          </div>
+          <!-- /REUSING RESULTS -->
+        </div>
+        <!-- /CONTENT -->
+      </div>
+    </div>
+    <!-- /CONTENT CONTAINER -->
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <h3>&copy;All Rights Reserved, 2020</h3>
+      </div>
+    </footer>
+    <!-- /FOOTER -->
+
+    <div class="top-btn">
+      <a href="#top"><h1>↑</h1></a>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

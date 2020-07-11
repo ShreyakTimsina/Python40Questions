@@ -1,0 +1,37 @@
+:root {
+  --medium-color: rgb(95, 95, 95);
+  --dark-color: rgb(49, 49, 49);
+  --light-color: #d1d1d1;
+  --code-bgcolor: rgb(138, 138, 138);
+}
+
+body {
+  background-color: var(--medium-color);
+  color: var(--light-color);
+}
+
+a {
+  color: var(--light-color);
+}
+
+.content-container aside ul {
+  background-color: var(--dark-color);
+}
+
+.details {
+  background-color: var(--dark-color);
+}
+
+.details h1 {
+  color: #fff;
+}
+
+table {
+  background-color: var(--light-color);
+
+  color: #fff;
+}
+
+td {
+  background-color: var(--code-bgcolor);
+}
