@@ -27,7 +27,8 @@ document.querySelector("#switch").addEventListener("change", function () {
 });
 
 // COPY CODE
-let clipboard1 = new ClipboardJS("#copy-btn");
+let clipboard1 = new ClipboardJS("#copy-btn1");
+//let clipboard2 = new ClipboardJS("#copy-btn2");
 // KEYWORD SEARCH
 
 function keywordSearch() {
